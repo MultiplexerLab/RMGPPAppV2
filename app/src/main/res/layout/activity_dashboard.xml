@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonNewReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:onClick="newReport"
+        android:text="Insert New Report"
+        android:textColor="@color/textColor" />
+
+    <Button
+        android:id="@+id/buttonSaveReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonNewReport"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:onClick="savedReport"
+        android:text="View Saved Report"
+        android:textColor="@color/textColor" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="209dp"
+        android:background="@color/redButton"
+        android:onClick="cancelDashboard"
+        android:text="Back"
+        android:textColor="@color/textColor" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="177dp"
+        android:background="@color/colorPrimary"
+        android:onClick="newReport"
+        android:padding="5dp"
+        android:text="Continue with this Unsaved One"
+        android:textColor="@color/textColor" />
+
+</RelativeLayout>

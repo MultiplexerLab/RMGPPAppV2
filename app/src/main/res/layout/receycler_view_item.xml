@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/hourlyOutput"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:hint="Hourly Output"
+            android:inputType="number"/>
+
+        <Spinner
+            android:id="@+id/spinnerTime"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:hint="Working Hour" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/workerId"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Worker ID"
+        android:padding="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/workerName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Worker Name"
+        android:padding="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/processName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Process Name"
+        android:padding="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/hourlyTarget"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Hourly Target"
+        android:padding="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/cuttingSlNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Cutting Serial Start"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/cuttingSlNo2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Cutting Serial End"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/problemTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="Problem Type"></Spinner>
+
+    <Spinner
+        android:id="@+id/problemsSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="Problem"></Spinner>
+
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Set a note"/>
+    <Button
+        android:id="@+id/saveIndividualEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@color/textColor" />
+</LinearLayout>

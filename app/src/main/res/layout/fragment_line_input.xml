@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <EditText
+        android:id="@+id/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Style"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextBuyer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buyer"
+        android:enabled = "false"
+        android:inputType="text" />
+
+
+    <EditText
+        android:id="@+id/editTextInputPurchaseOrderNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Purchase Order No"
+        android:enabled = "false"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextInputColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled = "false"
+        android:hint="Input Color"
+        android:inputType="text" />
+
+
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="Working Hour" />
+
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Quantity"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/saveHourlyEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@color/textColor" />
+
+    <ListView
+        android:id="@+id/listViewLineData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"></ListView>
+
+</LinearLayout>

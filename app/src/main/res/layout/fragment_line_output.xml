@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <EditText
+        android:id="@+id/editTextStyleOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Style"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextBuyer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Buyer"
+            android:enabled = "false"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextOutputPurchaseOrderNo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:hint="Purchase Order No"
+            android:enabled = "false"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextOutputColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled = "false"
+        android:hint="Output Color"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:hint="Working Hour" />
+
+    <EditText
+        android:id="@+id/editTextOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Output Quantity"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextOutputTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Output Target"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/problemTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:hint="Problem Type"></Spinner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/problemsSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:hint="Problem"></Spinner>
+
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="30dp"
+            android:hint="Status" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveHourlyEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@color/textColor" />
+
+    <ListView
+        android:id="@+id/listViewLineData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"></ListView>
+</LinearLayout>
