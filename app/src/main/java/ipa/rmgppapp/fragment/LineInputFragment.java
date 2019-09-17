@@ -79,7 +79,7 @@ public class LineInputFragment extends Fragment {
 
         getLineData();
 
-        SharedPreferences preferences = getActivity().getSharedPreferences(" ", MODE_PRIVATE);
+        SharedPreferences preferences = getActivity().getSharedPreferences("inputdata", MODE_PRIVATE);
         editTextBuyer.setText(preferences.getString("buyer", ""));
         editTextStyle.setText(preferences.getString("style", ""));
         editTextColor.setText(preferences.getString("color", ""));
@@ -90,7 +90,13 @@ public class LineInputFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("supervisor", MODE_PRIVATE);
         final String styleNo = sharedPreferences.getString("styleNo", "");
+        final String buyer = sharedPreferences.getString("buyer", "");
+        final String orderNo = sharedPreferences.getString("orderNo", "");
+        final String color = sharedPreferences.getString("color", "");
         editTextStyle.setText(styleNo);
+        editTextBuyer.setText(buyer);
+        editTextPO.setText(orderNo);
+        editTextColor.setText(color);
 
         editTextStyle.addTextChangedListener(new TextWatcher() {
             @Override

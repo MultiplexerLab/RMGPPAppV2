@@ -104,6 +104,7 @@ public class OBStyle extends AppCompatActivity {
                     SharedPreferences.Editor editor = getSharedPreferences("supervisor", MODE_PRIVATE).edit();
                     editor.putString("styleNoOB", styleNo.getText().toString());
                     editor.commit();
+                    finish();
                 } else {
                     Toast.makeText(OBStyle.this, "Server Problem!", Toast.LENGTH_SHORT).show();
                 }

@@ -68,7 +68,7 @@ public class HourlyEntryFragment extends Fragment {
         queue = Volley.newRequestQueue(getActivity());
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("supervisor", MODE_PRIVATE);
         String lineNo = sharedPreferences.getString("lineNo", "");
-        String tag = sharedPreferences.getString("styleNo", "");
+        String tag = sharedPreferences.getString("styleNoOB", "");
 
         String getUrl = Endpoints.GET_ASSIGNED_WORKER_URL + "?tag=" + tag+"&lineNo="+lineNo;
         getUrl = getUrl.replace(" ", "%20");

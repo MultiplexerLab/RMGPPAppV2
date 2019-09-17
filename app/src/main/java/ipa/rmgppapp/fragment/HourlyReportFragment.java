@@ -91,8 +91,8 @@ public class HourlyReportFragment extends Fragment {
         tableData.clear();
         final RequestQueue queue = Volley.newRequestQueue(getActivity());
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("supervisor", MODE_PRIVATE);
-        String tag = sharedPreferences.getString("styleNo", "");
-        String lineNo = sharedPreferences.getString("lineNo", "");
+        String tag = sharedPreferences.getString("styleNoOB", "");
+        final String lineNo = sharedPreferences.getString("lineNo", "");
 
         String getUrl = Endpoints.GET_ASSIGNED_WORKER_URL + "?tag=" + tag +"&lineNo="+lineNo;
         getUrl = getUrl.replace(" ", "%20");
@@ -113,7 +113,9 @@ public class HourlyReportFragment extends Fragment {
                     final String arr[] = new String[19];
                     final String workerId = processItems.get(i).getAssignedWorkerId();
                     final int finalI = i;
-                    JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, Endpoints.GET_HOURLY_RECORD_DATA + "?workerId=" + workerId+"&entryTime="+currentDate, null, new Response.Listener<JSONArray>() {
+                    String getUrlReport = Endpoints.GET_HOURLY_RECORD_DATA + "?workerId=" + workerId+"&entryTime="+currentDate+"&lineNo="+lineNo;
+                    Log.i("getUrlReport", getUrlReport);
+                    JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, getUrlReport, null, new Response.Listener<JSONArray>() {
                             @Override
                             public void onResponse(JSONArray response) {
                                 arr[1] = workerId;

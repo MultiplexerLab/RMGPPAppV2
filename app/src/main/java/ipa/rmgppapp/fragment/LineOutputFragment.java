@@ -102,7 +102,14 @@ public class LineOutputFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("supervisor", MODE_PRIVATE);
         final String styleNo = sharedPreferences.getString("styleNo", "");
+        final String buyer = sharedPreferences.getString("buyer", "");
+        final String orderNo = sharedPreferences.getString("orderNo", "");
+        final String color = sharedPreferences.getString("color", "");
         editTextStyle.setText(styleNo);
+        editTextBuyer.setText(buyer);
+        editTextPO.setText(orderNo);
+        editTextColor.setText(color);
+
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String currentDate = df.format(new Date()).toString();

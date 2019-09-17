@@ -67,7 +67,7 @@
             android:id="@+id/tableViewReport"
             android:layout_width="match_parent"
             android:layout_height="850dp"
-            table:tableView_columnCount="8"
+            table:tableView_columnCount="9"
             table:tableView_headerColor="@color/colorPrimary" />
     </HorizontalScrollView>
 

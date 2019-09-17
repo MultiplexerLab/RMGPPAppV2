@@ -119,7 +119,7 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                     Log.e("ArrayException", e.toString());
                 }
                 SharedPreferences sharedPreferences = context.getSharedPreferences("supervisor", MODE_PRIVATE);
-                String styleNo = sharedPreferences.getString("styleNo", "");
+                String styleNoOB = sharedPreferences.getString("styleNoOB", "");
                 String lineNo = sharedPreferences.getString("lineNo", "");
 
                 DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -127,7 +127,7 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                 Log.i("EntryTime", requiredDate);
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("jsonArrayString", jsonArrayString);
-                params.put("tag", styleNo);
+                params.put("tag", styleNoOB);
                 params.put("entryTime", requiredDate);
                 params.put("lineNo", lineNo);
                 Log.i("jsonArrayString", jsonArrayString);

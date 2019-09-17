@@ -105,7 +105,7 @@ public class AddNewStyle extends AppCompatActivity {
             Toast.makeText(this, "Insert StyleNo then Search", Toast.LENGTH_SHORT).show();
         } else {
             RequestQueue queue = Volley.newRequestQueue(this);
-            String url = Endpoints.GET_STYLE_DETAILS_FROM_ORDERLIST + "?tag=StyleNo" + "&val=" + styleNo.getText().toString();
+            String url = Endpoints.GET_STYLE_DETAILS_FROM_ORDERLIST + "?val=" + styleNo.getText().toString();
             url = url.replace(" ", "%20");
             Log.i("getUrl", url);
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
@@ -117,6 +117,7 @@ public class AddNewStyle extends AppCompatActivity {
                             styleNo.setText(jsonObject.getString("style"));
                             buyer.setText(jsonObject.getString("buyer"));
                             order.setText(jsonObject.getString("orderNo"));
+                            color.setText(jsonObject.getString("color"));
                             quantity.setText(jsonObject.getString("quantity"));
                             item.setText(jsonObject.getString("item"));
                             if (jsonObject.getString("color") != null) {
@@ -215,6 +216,7 @@ public class AddNewStyle extends AppCompatActivity {
                 params.put("description", "");
                 params.put("item", item.getText().toString());
                 params.put("orderNo", order.getText().toString());
+                params.put("color", color.getText().toString());
                 params.put("shipmentDate", shipmentdate.getText().toString());
                 params.put("quantity", quantity.getText().toString());
                 params.put("sewingStart", sdf.format(cal.getTime()));

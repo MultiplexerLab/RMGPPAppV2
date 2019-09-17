@@ -10,8 +10,9 @@ public class PlanningData {
     private String shipmentData;
     private String plannedQuantity;
     private String status;
+    private String color;
 
-    public PlanningData(String buyer, String style, String item, String description, String orderNo, String shipmentData, String plannedQuantity) {
+    public PlanningData(String buyer, String style, String item, String description, String orderNo, String shipmentData, String plannedQuantity, String color) {
         this.buyer = buyer;
         this.style = style;
         this.item = item;
@@ -19,6 +20,7 @@ public class PlanningData {
         this.orderNo = orderNo;
         this.shipmentData = shipmentData;
         this.plannedQuantity = plannedQuantity;
+        this.color = color;
     }
 
     public PlanningData(String id, String buyer, String style, String item, String description, String orderNo, String shipmentData, String plannedQuantity, String status) {
@@ -95,6 +97,14 @@ public class PlanningData {
 
     public void setShipmentData(String shipmentData) {
         this.shipmentData = shipmentData;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getPlannedQuantity() {

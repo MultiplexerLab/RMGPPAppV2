@@ -26,7 +26,6 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="Buyer"
-            android:enabled = "false"
             android:inputType="text" />
 
         <EditText
@@ -36,7 +35,6 @@
             android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
             android:hint="Purchase Order No"
-            android:enabled = "false"
             android:inputType="text" />
 
     </LinearLayout>
@@ -45,7 +43,6 @@
         android:id="@+id/editTextOutputColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:enabled = "false"
         android:hint="Output Color"
         android:inputType="text" />
 

@@ -17,7 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Buyer"
-        android:enabled = "false"
         android:inputType="text" />
 
 
@@ -26,14 +25,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Purchase Order No"
-        android:enabled = "false"
         android:inputType="text" />
 
     <EditText
         android:id="@+id/editTextInputColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:enabled = "false"
         android:hint="Input Color"
         android:inputType="text" />
 

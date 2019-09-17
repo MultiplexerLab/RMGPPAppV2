@@ -44,7 +44,7 @@ import ipa.rmgppapp.model.PlanningData;
 
 public class StyleListActivity extends AppCompatActivity {
 
-    private static final String[] TABLE_HEADERS = {"SL No", "Buyer", "Style", "Item", "Order", "Quantity", "Ship Date", "Status"};
+    private static final String[] TABLE_HEADERS = {"SL No", "Buyer", "Style", "Item", "Color", "Order", "Quantity", "Ship Date", "Status"};
 
     RequestQueue queue;
     ArrayList<PlanningData> planningDataArrayList;
@@ -88,7 +88,7 @@ public class StyleListActivity extends AppCompatActivity {
 
                     for (int i = 0; i < planningDataArrayList.size(); i++) {
                         PlanningData obj = planningDataArrayList.get(i);
-                        tableData.add(i, new String[]{(i + 1) + "", obj.getBuyer(), obj.getStyle(), obj.getItem(), obj.getOrderNo(), obj.getPlannedQuantity(), obj.getShipmentData(),
+                        tableData.add(i, new String[]{(i + 1) + "", obj.getBuyer(), obj.getStyle(), obj.getItem(), obj.getColor(), obj.getOrderNo(), obj.getPlannedQuantity(), obj.getShipmentData(),
                                 obj.getStatus()});
                     }
                     setTableData();
@@ -108,7 +108,7 @@ public class StyleListActivity extends AppCompatActivity {
 
     public void setTableData() {
         tableView = findViewById(R.id.tableViewReport);
-        TableColumnDpWidthModel columnModel1 = new TableColumnDpWidthModel(this, 8, 160);
+        TableColumnDpWidthModel columnModel1 = new TableColumnDpWidthModel(this, 9, 160);
         columnModel1.setColumnWidth(0, 60);
         columnModel1.setColumnWidth(1, 180);
         columnModel1.setColumnWidth(2, 220);
@@ -130,6 +130,9 @@ public class StyleListActivity extends AppCompatActivity {
 
                 SharedPreferences.Editor editor = getSharedPreferences("supervisor", MODE_PRIVATE).edit();
                 editor.putString("styleNo", planningDataArrayList.get(rowIndex).getStyle());
+                editor.putString("buyer", planningDataArrayList.get(rowIndex).getBuyer());
+                editor.putString("orderNo", planningDataArrayList.get(rowIndex).getOrderNo());
+                editor.putString("color", planningDataArrayList.get(rowIndex).getColor());
                 editor.commit();
 
                 if (styleNo.isEmpty()) {
