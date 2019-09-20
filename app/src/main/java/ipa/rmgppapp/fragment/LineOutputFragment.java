@@ -456,7 +456,7 @@ public class LineOutputFragment extends Fragment {
                 params.put("buildingNo", buildingNo);
                 params.put("unitNo", unitNo);
                 params.put("factoryCode", factoryCode);
-                params.put("uniqueKey", "out" + supervisor + styleNo + obj.getOrderNumber() + obj.getColor() + obj.getHour() + currentDate);
+                params.put("uniqueKey", "out" + lineNo +supervisor + styleNo + obj.getOrderNumber() + obj.getColor() + obj.getHour() + currentDate);
                 Log.i("jsonStringOutput", params.toString());
                 return params;
             }

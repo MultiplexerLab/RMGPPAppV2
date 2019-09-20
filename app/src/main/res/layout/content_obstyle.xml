@@ -12,6 +12,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OB Style No"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"/>
         <AutoCompleteTextView
             android:id="@+id/editTextStyleOB"
             android:layout_width="200dp"
@@ -28,23 +34,37 @@
             android:src="@drawable/search" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextSMVOB"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="SMV" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMV"
+            android:layout_marginRight="20dp"/>
+        <EditText
+            android:id="@+id/editTextSMVOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SMV"
+            android:enabled="false"/>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/editTextBuyerOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:hint="Buyer" />
 
     <EditText
         android:id="@+id/editTextItemOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Item" />
+        android:hint="Item"
+        />
 
     <EditText
         android:id="@+id/editTextManPower"

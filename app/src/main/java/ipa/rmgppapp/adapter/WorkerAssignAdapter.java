@@ -69,11 +69,10 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
         for (int i = 0; i < workerArrayList.size(); i++) {
             if (workerArrayList.get(i).getWorkerId().contains(s)) {
                 worker = workerArrayList.get(i);
+                return worker;
             }
         }
         if(worker==null){
-            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-            String currentDate = df.format(new Date()).toString();
             worker = new Worker(s, "", "", "");
         }
         return worker;
@@ -121,6 +120,7 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                 SharedPreferences sharedPreferences = context.getSharedPreferences("supervisor", MODE_PRIVATE);
                 String styleNoOB = sharedPreferences.getString("styleNoOB", "");
                 String lineNo = sharedPreferences.getString("lineNo", "");
+                String supervisorId = sharedPreferences.getString("supervisorId", "");
 
                 DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
                 String requiredDate = df.format(new Date()).toString();
@@ -130,6 +130,7 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                 params.put("tag", styleNoOB);
                 params.put("entryTime", requiredDate);
                 params.put("lineNo", lineNo);
+                params.put("supervisorId", supervisorId);
                 Log.i("jsonArrayString", jsonArrayString);
                 return params;
             }

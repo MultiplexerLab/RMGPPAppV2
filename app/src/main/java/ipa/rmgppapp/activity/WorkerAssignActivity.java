@@ -73,9 +73,10 @@ public class WorkerAssignActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("supervisor", MODE_PRIVATE);
         String tag = sharedPreferences.getString("styleNoOB", "");
         String lineNo = sharedPreferences.getString("lineNo", "");
+        String supervisorId = sharedPreferences.getString("supervisorId", "");
         Log.i("tagData", tag);
 
-        String getUrl = Endpoints.GET_OPERATION_DATA_URL + "?styleNo=" + tag+"&lineNo="+lineNo;
+        String getUrl = Endpoints.GET_OPERATION_DATA_URL + "?styleNo=" + tag+"&lineNo="+lineNo+"&supervisorId="+supervisorId;
         getUrl = getUrl.replace(" ", "%20");
         Log.i("getUrlWorkersAssign", getUrl);
 

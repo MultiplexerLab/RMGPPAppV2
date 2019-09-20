@@ -76,7 +76,7 @@ public class StyleListActivity extends AppCompatActivity {
 
         Log.i("lineNo", lineNo);
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, Endpoints.GET_PLANNING_DATA_URL + "?lineNo=" + lineNo+"&factoryCode="+factoryCode, null, new Response.Listener<JSONArray>() {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, Endpoints.GET_PLANNING_DATA_URL + "?lineNo=" + lineNo + "&factoryCode=" + factoryCode, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray jsonArray) {
                 Log.i("responseStyles", jsonArray.toString());
@@ -149,20 +149,32 @@ public class StyleListActivity extends AppCompatActivity {
             public boolean onDataLongClicked(final int rowIndex, Object clickedData) {
 
                 AlertDialog.Builder dialog = new AlertDialog.Builder(StyleListActivity.this);
-                dialog.setTitle("Delete a style?").setCancelable(false).setMessage("Do you want to complete this style?");
-                dialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        PlanningData planningData = planningDataArrayList.get(rowIndex);
-                        updateStatus(planningData.getId());
-                    }
-                });
-                dialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.dismiss();
-                    }
-                });
+                final PlanningData planningData = planningDataArrayList.get(rowIndex);
+                String status = planningData.getStatus();
+
+                if (status.equals("Active")) {
+                    dialog.setTitle("Edit Status").setCancelable(false).setMessage("Do you want to Complete this style?");
+                    dialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            updateStatus(planningData.getId(), "Completed");
+                        }
+                    });
+                } else{
+                    dialog.setTitle("Edit Status").setCancelable(false).setMessage("Do you want to Active this style?");
+                    dialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            updateStatus(planningData.getId(), "Active");
+                        }
+                    });
+                }
+                    dialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
                 dialog.show();
                 return true;
             }
@@ -215,9 +227,10 @@ public class StyleListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void updateStatus(String id) {
+    private void updateStatus(String id, String value) {
         RequestQueue queue = Volley.newRequestQueue(StyleListActivity.this);
-        String updateUrl = Endpoints.UPDATE_STYLE_STATUS + "?id=" + id;
+
+        String updateUrl = Endpoints.UPDATE_STYLE_STATUS + "?id=" + id+"&value="+value;
         updateUrl = updateUrl.replace(" ", "%20");
         Log.i("updateUrl", updateUrl);
 
