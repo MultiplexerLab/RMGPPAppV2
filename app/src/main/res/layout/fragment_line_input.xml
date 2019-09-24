@@ -5,48 +5,128 @@
     android:orientation="vertical"
     android:padding="5dp">
 
-    <EditText
-        android:id="@+id/editTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Style"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/editTextBuyer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Buyer"
-        android:inputType="text" />
 
 
-    <EditText
-        android:id="@+id/editTextInputPurchaseOrderNo"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Purchase Order No"
-        android:inputType="text" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/editTextInputColor"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Style"
+            android:layout_marginRight="25dp"/>
+
+        <EditText
+            android:id="@+id/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Style"
+            android:inputType="text" />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Color"
-        android:inputType="text" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buyer"
+            android:layout_marginRight="20dp"/>
+
+        <EditText
+            android:id="@+id/editTextBuyer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buyer"
+            android:inputType="text" />
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase Order No"
+            android:layout_marginRight="15dp"/>
+        <EditText
+            android:id="@+id/editTextInputPurchaseOrderNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Purchase Order No"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Color"
+            android:layout_marginRight="40dp"/>
+
+        <EditText
+            android:id="@+id/editTextInputColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input Color"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
 
 
     <Spinner
         android:id="@+id/spinnerTime"
+        android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:hint="Working Hour" />
 
-    <EditText
-        android:id="@+id/editTextInput"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Quantity"
-        android:inputType="number" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Quantity"
+            android:layout_marginRight="20dp"/>
+        <EditText
+            android:id="@+id/editTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input Quantity"
+            android:inputType="number" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/saveHourlyEntry"

@@ -30,7 +30,6 @@
             android:layout_height="40dp"
             android:layout_marginTop="80dp"
             android:onClick="getOrderListData"
-            android:layout_marginLeft="20dp"
             android:src="@drawable/search" />
     </LinearLayout>
 
@@ -52,25 +51,60 @@
             android:enabled="false"/>
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextBuyerOB"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:enabled="false"
-        android:hint="Buyer" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/editTextItemOB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Item"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buyer"
+            android:layout_marginRight="13dp"/>
+        <EditText
+            android:id="@+id/editTextBuyerOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Buyer" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextManPower"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Required Manpower" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item"
+            android:layout_marginRight="20dp"/>
+        <EditText
+            android:id="@+id/editTextItemOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Item"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manpower"
+            android:layout_marginRight="10dp"/>
+        <EditText
+            android:id="@+id/editTextManPower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Required Manpower" />
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"

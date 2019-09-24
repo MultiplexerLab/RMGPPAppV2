@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\RMGPPApp\\RMGPPApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ml\\values-ml.xml",
+            "outputFile": "C:\\Users\\Usha\\AndroidStudioProjects\\newrmgpp\\RMGPPAppV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ml\\values-ml.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\28c41b6171a37455dd2c21009682323f\\play-services-basement-15.0.1\\res\\values-ml\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "218",
-                        "endOffsets": "465"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3138",
-                        "endColumns": "218",
-                        "endOffsets": "3352"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\c14ddce2c9896a07cadebeea78e57d51\\support-compat-27.1.1\\res\\values-ml\\values-ml.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4854",
-                        "endColumns": "100",
-                        "endOffsets": "4950"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\1bec5d34c450a693d3a6737929cf4156\\play-services-base-15.0.1\\res\\values-ml\\values.xml",
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\1bec5d34c450a693d3a6737929cf4156\\play-services-base-15.0.1\\res\\values-ml\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\a0455481aaad1d846e9ec18255cf757d\\appcompat-v7-27.1.1\\res\\values-ml\\values-ml.xml",
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\a0455481aaad1d846e9ec18255cf757d\\appcompat-v7-27.1.1\\res\\values-ml\\values-ml.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -69,6 +35,40 @@
                         "startOffsets": "105,224,342,457,550,655,787,864,940,1022,1133,1239,1337,1451,1551,1662,1821,4772",
                         "endColumns": "118,117,114,92,104,131,76,75,81,110,105,97,113,99,110,158,100,81",
                         "endOffsets": "219,337,452,545,650,782,859,935,1017,1128,1234,1332,1446,1546,1657,1816,1917,4849"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\c14ddce2c9896a07cadebeea78e57d51\\support-compat-27.1.1\\res\\values-ml\\values-ml.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4854",
+                        "endColumns": "100",
+                        "endOffsets": "4950"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\28c41b6171a37455dd2c21009682323f\\play-services-basement-15.0.1\\res\\values-ml\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "218",
+                        "endOffsets": "465"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3138",
+                        "endColumns": "218",
+                        "endOffsets": "3352"
                     }
                 }
             ]

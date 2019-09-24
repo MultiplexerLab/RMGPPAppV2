@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\RMGPPApp\\RMGPPApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ro\\values-ro.xml",
+            "outputFile": "C:\\Users\\Usha\\AndroidStudioProjects\\newrmgpp\\RMGPPAppV2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ro\\values-ro.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\28c41b6171a37455dd2c21009682323f\\play-services-basement-15.0.1\\res\\values-ro\\values.xml",
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\28c41b6171a37455dd2c21009682323f\\play-services-basement-15.0.1\\res\\values-ro\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\c14ddce2c9896a07cadebeea78e57d51\\support-compat-27.1.1\\res\\values-ro\\values-ro.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "38",
-                        "startColumns": "4",
-                        "startOffsets": "4762",
-                        "endColumns": "100",
-                        "endOffsets": "4858"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\a0455481aaad1d846e9ec18255cf757d\\appcompat-v7-27.1.1\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\a0455481aaad1d846e9ec18255cf757d\\appcompat-v7-27.1.1\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\1bec5d34c450a693d3a6737929cf4156\\play-services-base-15.0.1\\res\\values-ro\\values.xml",
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\1bec5d34c450a693d3a6737929cf4156\\play-services-base-15.0.1\\res\\values-ro\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +52,23 @@
                         "startOffsets": "1930,2039,2231,2362,2473,2683,2817,2970,3312,3533,3645,3835,3969,4174,4370,4471,4568",
                         "endColumns": "108,191,130,110,209,133,152,137,220,111,189,133,204,195,100,96,110",
                         "endOffsets": "2034,2226,2357,2468,2678,2812,2965,3103,3528,3640,3830,3964,4169,4365,4466,4563,4674"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usha\\.gradle\\caches\\transforms-2\\files-2.1\\c14ddce2c9896a07cadebeea78e57d51\\support-compat-27.1.1\\res\\values-ro\\values-ro.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "38",
+                        "startColumns": "4",
+                        "startOffsets": "4762",
+                        "endColumns": "100",
+                        "endOffsets": "4858"
                     }
                 }
             ]

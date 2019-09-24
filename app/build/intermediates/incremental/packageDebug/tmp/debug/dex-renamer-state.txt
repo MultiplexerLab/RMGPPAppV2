@@ -1,4 +1,4 @@
-#Fri Sep 20 11:50:42 BDT 2019
-base.0=D\:\\RMGPPApp\\RMGPPApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Tue Sep 24 16:10:04 BDT 2019
+base.0=C\:\\Users\\Usha\\AndroidStudioProjects\\newrmgpp\\RMGPPAppV2\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

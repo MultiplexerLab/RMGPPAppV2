@@ -2,22 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <EditText
-        android:id="@+id/editTextLineInput"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Total Line Target"
-        android:inputType="number"/>
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Line Target"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"/>
 
-    <EditText
-        android:id="@+id/editTextTotalHours"
+        <EditText
+            android:id="@+id/editTextLineInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter Total Line Target"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Total Working Hours"
-        android:inputType="number"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Working\nHours"
+            android:layout_gravity="center"
+
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/editTextTotalHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter Total Working Hours"
+            android:inputType="number"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/lineInputBtn"
@@ -25,6 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:text="SAVE"/>
 
 </LinearLayout>
