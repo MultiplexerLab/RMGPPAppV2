@@ -212,7 +212,9 @@ public class LoginActivity extends AppCompatActivity {
                 Settings.Secure.ANDROID_ID);
 
         Log.i("DeviceId", deviceId);
-        String url = "http://beta.rmgppapp.com/api/checkValidFactory/" + deviceId;
+        String url = "https://beta.rmgppapp.com/api/checkValidFactory/" + deviceId;
+
+        Log.i("urlDeviceCheck", url);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
