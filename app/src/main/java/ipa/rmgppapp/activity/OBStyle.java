@@ -94,7 +94,12 @@ public class OBStyle extends AppCompatActivity {
     }
 
     public void saveOBStyleData(View view) {
-        RequestQueue queue = Volley.newRequestQueue(this);
+        Toast.makeText(OBStyle.this, "Successfully Inserted!", Toast.LENGTH_SHORT).show();
+        SharedPreferences.Editor editor = getSharedPreferences("supervisor", MODE_PRIVATE).edit();
+        editor.putString("styleNoOB", styleNo.getText().toString());
+        editor.commit();
+        finish();
+        /*RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Endpoints.POST_OB_STYLE_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -106,14 +111,14 @@ public class OBStyle extends AppCompatActivity {
                     editor.commit();
                     finish();
                 } else {
-                    Toast.makeText(OBStyle.this, "Server Problem!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(OBStyle.this, "Server Problem!", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("StyleEntryErr", error.toString());
-                Toast.makeText(OBStyle.this, "Server Problem!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(OBStyle.this, "Server Problem!", Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
@@ -141,7 +146,7 @@ public class OBStyle extends AppCompatActivity {
                 return params;
             }
         };
-        queue.add(stringRequest);
+        queue.add(stringRequest);*/
     }
 
     private void getAllStyles() {

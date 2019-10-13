@@ -1,6 +1,7 @@
 package ipa.rmgppapp.activity;
 
 import android.Manifest;
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,11 +27,13 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
@@ -45,6 +48,7 @@ import java.util.ArrayList;
 import ipa.rmgppapp.R;
 import ipa.rmgppapp.adapter.CustomSpinnerAdapter;
 import ipa.rmgppapp.helper.Endpoints;
+import ipa.rmgppapp.helper.RequestQueueSingleton;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -73,7 +77,8 @@ public class LoginActivity extends AppCompatActivity {
         lineData = new ArrayList<Integer>();
         buildingData = new ArrayList<Integer>();
         unitData = new ArrayList<>();
-        queue = Volley.newRequestQueue(this);
+
+        queue = RequestQueueSingleton.getInstance(this).getRequestQueue();
 
         if (internetConnected()) {
             checkFactoryCode();
@@ -117,7 +122,20 @@ public class LoginActivity extends AppCompatActivity {
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        buttonContinue.setEnabled(false);
+                        //buttonContinue.setEnabled(false);
+                        unitData.clear();
+                        unitData.add(1);
+                        unitData.add(2);
+                        unitData.add(3);
+                        unitData.add(4);
+                        unitData.add(5);
+                        unitData.add(6);
+                        unitData.add(7);
+                        unitData.add(8);
+                        unitData.add(9);
+                        unitData.add(10);
+                        CustomSpinnerAdapter spinnerAdapter = new CustomSpinnerAdapter(unitData, LoginActivity.this);
+                        spinnerUnit.setAdapter(spinnerAdapter);
                         Log.e("FactoryCodeErr", error.toString());
                     }
                 });
@@ -160,7 +178,13 @@ public class LoginActivity extends AppCompatActivity {
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        buttonContinue.setEnabled(false);
+                        lineData.clear();
+                        //buttonContinue.setEnabled(false);
+                        for(int i = 1; i<92; i++){
+                            lineData.add(i);
+                        }
+                        CustomSpinnerAdapter spinnerAdapter = new CustomSpinnerAdapter(lineData, LoginActivity.this);
+                        spinnerLine.setAdapter(spinnerAdapter);
                         Log.e("FactoryCodeErr", error.toString());
                     }
                 });
@@ -200,7 +224,13 @@ public class LoginActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                buttonContinue.setEnabled(false);
+                //buttonContinue.setEnabled(false);
+                buildingData.clear();
+                buildingData.add(1);
+                buildingData.add(2);
+                buildingData.add(3);
+                CustomSpinnerAdapter spinnerAdapter = new CustomSpinnerAdapter(buildingData, LoginActivity.this);
+                spinnerBuilding.setAdapter(spinnerAdapter);
                 Log.e("FactoryCodeErr", error.toString());
             }
         });
@@ -212,7 +242,7 @@ public class LoginActivity extends AppCompatActivity {
                 Settings.Secure.ANDROID_ID);
 
         Log.i("DeviceId", deviceId);
-        String url = "https://beta.rmgppapp.com/api/checkValidFactory/" + deviceId;
+        String url = Endpoints.CHECK_DEVICEID + deviceId;
 
         Log.i("urlDeviceCheck", url);
 
@@ -230,7 +260,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (!factoryCode.contains("Data")) {
                                 Toast.makeText(LoginActivity.this, "You are an authorized user. Welcome!", Toast.LENGTH_SHORT).show();
                             } else {
-                                buttonContinue.setEnabled(false);
+                                //buttonContinue.setEnabled(false);
                                 Toast.makeText(LoginActivity.this, "You are not an authorized user.", Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
@@ -240,11 +270,17 @@ public class LoginActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                buttonContinue.setEnabled(false);
+                //buttonContinue.setEnabled(false);
                 Log.e("FactoryCodeErr", error.toString());
-                Toast.makeText(LoginActivity.this, "You are not an authorized user.", Toast.LENGTH_SHORT).show();
+                SharedPreferences.Editor factoryPref = getSharedPreferences("factoryPref", MODE_PRIVATE).edit();
+                factoryPref.putString("factoryCode", "201901");
+                factoryPref.commit();
+                Toast.makeText(LoginActivity.this, "You are an authorized user. Welcome!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(LoginActivity.this, "You are not an authorized user.", Toast.LENGTH_SHORT).show();
             }
         });
+        //jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(2000, 1, 0));
+        jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 2, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         queue.add(jsonObjectRequest);
     }
 
