@@ -7,7 +7,6 @@ public class Endpoints {
     public static final String POST_ASSIGNED_WORKER_URL = BASE_URL + "insertAssignedWorker.php";
     public static final String GET_HR_DATA_URL = BASE_URL + "hrData.php";
     public static final String GET_PLANNING_DATA_URL = BASE_URL + "planningData.php";
-    public static final String GET_PLANNED_LINE_URL = BASE_URL + "getPlannedLines.php";
     public static final String GET_OPERATION_DATA_URL = BASE_URL + "operationData.php";
     public static final String POST_HOURLY_DATA_URL = BASE_URL + "insertHourlyRecord.php";
     public static final String POST_LINE_DATA_URL = BASE_URL + "insertLineData.php";
@@ -28,7 +27,6 @@ public class Endpoints {
     public static final String UPDATE_LINE_DATA_STATUS = BASE_URL + "updateStatus.php";
     public static final String UPDATE_STYLE_STATUS = BASE_URL + "updateStatusStyle.php";
     public static final String GET_STYLE_SUMMERY = BASE_URL2+ "getLineSummary/";
-    public static final String POST_OB_STYLE_URL = BASE_URL2 + "insertOBStyleData";
     public static final String GET_BUILDING_DATA = BASE_URL2 + "getBuildingData/";
     public static final String CHECK_DEVICEID = "https://beta.rmgppapp.com/api/checkValidFactory/";
 }

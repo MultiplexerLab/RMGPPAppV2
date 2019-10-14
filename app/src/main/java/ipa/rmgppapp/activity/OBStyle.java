@@ -155,6 +155,7 @@ public class OBStyle extends AppCompatActivity {
             @Override
             public void onResponse(JSONArray response) {
                 Log.i("DescriptionData", response.toString());
+                styleList.clear();
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         styleList.add(response.getJSONObject(i).getString("Style"));
@@ -171,5 +172,9 @@ public class OBStyle extends AppCompatActivity {
             }
         });
         queue.add(jsonArrayRequest);
+    }
+
+    public void refreshOBStyle(View view) {
+        getAllStyles();
     }
 }
