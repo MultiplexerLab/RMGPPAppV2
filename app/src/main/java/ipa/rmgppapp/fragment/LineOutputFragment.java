@@ -479,13 +479,15 @@ public class LineOutputFragment extends Fragment {
         arrayListLineData.clear();
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("supervisor", MODE_PRIVATE);
         final String styleNo = sharedPreferences.getString("styleNo", "");
+        final String superVisorId = sharedPreferences.getString("supervisorId", "");
+
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String currentDate = df.format(new Date()).toString();
 
         RequestQueue queue = Volley.newRequestQueue(getActivity());
 
         String url = Endpoints.GET_LINE_RECORD + "?styleNo=" + styleNo +
-                "&entryTime=" + currentDate;
+                "&entryTime=" + currentDate+"&supervisorId="+superVisorId;
         url = url.replace(" ", "%20");
         Log.i("urlLineOutput", url);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {

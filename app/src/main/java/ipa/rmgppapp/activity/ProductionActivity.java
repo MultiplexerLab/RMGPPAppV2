@@ -195,18 +195,23 @@ public class ProductionActivity extends AppCompatActivity {
                 String requiredDate = df.format(new Date()).toString();
 
                 SharedPreferences sharedPreferences = getSharedPreferences("supervisor", MODE_PRIVATE);
+                String superVisorId = sharedPreferences.getString("supervisorId", "");
+                String lineNo = sharedPreferences.getString("lineNo", "");
+                String styleNo = sharedPreferences.getString("styleNo", "");
+
 
                 int lineInput = Integer.parseInt(lineTargetStr) / Integer.parseInt(totalHours);
 
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("styleNo", sharedPreferences.getString("styleNo", ""));
+                params.put("styleNo", styleNo);
+                params.put("secret_key", superVisorId + lineNo + styleNo+requiredDate);
                 params.put("lineTarget", lineInput + "");
                 params.put("totalTarget", lineTargetStr);
                 params.put("totalHours", totalHours);
                 params.put("entryTime", requiredDate);
                 params.put("time", DateTimeInstance.getTimeStamp());
-                params.put("lineNo", sharedPreferences.getString("lineNo", ""));
-                params.put("supervisorId", sharedPreferences.getString("supervisorId", ""));
+                params.put("lineNo", lineNo);
+                params.put("supervisorId", superVisorId);
 
                 Log.i("ParamsStr", params.toString());
 
