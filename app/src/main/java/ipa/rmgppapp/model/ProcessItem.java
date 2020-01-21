@@ -2,7 +2,6 @@ package ipa.rmgppapp.model;
 
 public class ProcessItem {
 
-    private int id;
     private String processName;
     private String machineType;
     private Double hourlyTarget;
@@ -17,21 +16,12 @@ public class ProcessItem {
         this.assignedWorkerId = assignedWorkerId;
     }*/
 
-    public ProcessItem(int id, String processName, String machineType, Double hourlyTarget, String assignedWorkerId, String assignedWorkerName) {
-        this.id = id;
+    public ProcessItem(String processName, String machineType, Double hourlyTarget, String assignedWorkerId, String assignedWorkerName) {
         this.processName = processName;
         this.machineType = machineType;
         this.hourlyTarget = hourlyTarget;
         this.assignedWorkerId = assignedWorkerId;
         this.assignedWorkerName = assignedWorkerName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getProcessName() {

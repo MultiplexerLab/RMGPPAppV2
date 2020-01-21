@@ -185,7 +185,7 @@ public class LineOutputFragment extends Fragment {
                     Toast.makeText(getActivity(), "স্টাইল সেট করুন", Toast.LENGTH_SHORT).show();
                 }else {
                     LineEntry lineEntry = new LineEntry(editTextBuyer.getText().toString(), editTextStyle.getText().toString(),
-                            editTextPO.getText().toString(), editTextColor.getText().toString(), spinnerTime.getSelectedItem().toString(),
+                            editTextPO.getText().toString(), editTextColor.getText().toString(), spinnerTime.getSelectedItem().toString(), "",
                             editTextOutput.getText().toString(), problemType, problem, status, requiredDate, DateTimeInstance.getTimeStamp());
                     saveLineEntry(lineEntry);
                 }

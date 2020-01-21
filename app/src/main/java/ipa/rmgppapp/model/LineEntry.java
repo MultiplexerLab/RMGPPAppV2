@@ -14,28 +14,18 @@ public class LineEntry {
     private String entryTime;
     private String timeStamp;
 
-    public LineEntry(String buyer, String styleNo, String orderNumber, String color, String hour, String lineOutput, String problemType, String problem, String status, String entryTime, String timeStamp) {
+    public LineEntry(String buyer, String styleNo, String orderNumber, String color, String hour, String lineInput, String lineOutput, String problemType, String problem, String status, String entryTime, String timeStamp) {
         this.hour = hour;
         this.buyer = buyer;
         this.orderNumber = orderNumber;
         this.color = color;
+        this.lineInput = lineInput;
         this.lineOutput = lineOutput;
         this.problemType = problemType;
         this.status = status;
         this.styleNo = styleNo;
         this.entryTime = entryTime;
         this.problem = problem;
-        this.timeStamp = timeStamp;
-    }
-
-    public LineEntry(String buyer, String styleNo, String orderNumber, String color, String hour, String lineInput, String entryTime, String timeStamp) {
-        this.buyer = buyer;
-        this.orderNumber = orderNumber;
-        this.color = color;
-        this.hour = hour;
-        this.styleNo = styleNo;
-        this.lineInput = lineInput;
-        this.entryTime = entryTime;
         this.timeStamp = timeStamp;
     }
 

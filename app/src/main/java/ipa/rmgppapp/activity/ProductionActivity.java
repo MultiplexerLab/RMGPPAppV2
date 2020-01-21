@@ -102,12 +102,14 @@ public class ProductionActivity extends AppCompatActivity {
     private void getPreviousLineTargetData() {
         SharedPreferences sharedPreferences = getSharedPreferences("supervisor", MODE_PRIVATE);
         String styleNo = sharedPreferences.getString("styleNo", "");
+        String supervisorId = sharedPreferences.getString("supervisorId", "");
+        String lineNo = sharedPreferences.getString("lineNo", "");
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String currentDate = df.format(new Date()).toString();
 
-        String getUrl = Endpoints.CHECK_LINE_TARGET_URL + "?styleNo=" + styleNo + "&entryTime=" + currentDate;
+        String getUrl = Endpoints.CHECK_LINE_TARGET_URL + "?styleNo=" + styleNo + "&entryTime=" + currentDate + "&supervisorId=" + supervisorId +"&lineNo=" + lineNo ;
         getUrl = getUrl.replace(" ", "%20");
-        Log.i("getUrl", getUrl);
+        Log.i("getUrlLineTarget", getUrl);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, getUrl, null, new Response.Listener<JSONArray>() {
             @Override
@@ -198,7 +200,6 @@ public class ProductionActivity extends AppCompatActivity {
                 String superVisorId = sharedPreferences.getString("supervisorId", "");
                 String lineNo = sharedPreferences.getString("lineNo", "");
                 String styleNo = sharedPreferences.getString("styleNo", "");
-
 
                 int lineInput = Integer.parseInt(lineTargetStr) / Integer.parseInt(totalHours);
 

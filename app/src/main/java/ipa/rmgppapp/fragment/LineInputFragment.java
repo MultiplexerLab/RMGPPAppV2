@@ -131,7 +131,7 @@ public class LineInputFragment extends Fragment {
                 }else {
                     LineEntry lineEntry = new LineEntry(editTextBuyer.getText().toString(), editTextStyle.getText().toString(),
                             editTextPO.getText().toString(), editTextColor.getText().toString(), spinnerTime.getSelectedItem().toString(),
-                            editTextInput.getText().toString(), requiredDate, DateTimeInstance.getTimeStamp());
+                            editTextInput.getText().toString(), "", "", "", "", requiredDate, DateTimeInstance.getTimeStamp());
                     saveLineEntry(lineEntry);
                 }
             }
@@ -277,6 +277,7 @@ public class LineInputFragment extends Fragment {
                 Log.i("jsonString", params.toString());
                 return params;
             }
+
         };
         queue.add(stringRequest);
     }

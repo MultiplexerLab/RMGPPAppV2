@@ -131,7 +131,7 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                 params.put("entryTime", requiredDate);
                 params.put("lineNo", lineNo);
                 params.put("supervisorId", supervisorId);
-                Log.i("jsonArrayString", jsonArrayString);
+                Log.i("params", params.toString());
                 return params;
             }
         };
@@ -194,9 +194,9 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                             Log.i("Dhukse", "Dhukse");
                             Worker worker = getWorkerInfo(holder.workerIdView.getText().toString());
                             processItemArrayList.remove(position);
-                            processItemArrayList.add(position, new ProcessItem(processItem.getId(), processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
+                            processItemArrayList.add(position, new ProcessItem(processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
                                     holder.workerIdView.getText().toString(), worker.getName()));
-                            assignedWorkerData.add(new ProcessItem(processItem.getId(), processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
+                            assignedWorkerData.add(new ProcessItem(processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
                                     holder.workerIdView.getText().toString(), worker.getName()));
                         }
                     } catch (Exception e) {
@@ -204,9 +204,9 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                     }
                 } else if(holder.workerIdView.getText().toString().isEmpty()){
                     processItemArrayList.remove(position);
-                    processItemArrayList.add(position, new ProcessItem(processItem.getId(), processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
+                    processItemArrayList.add(position, new ProcessItem(processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
                             "", ""));
-                    assignedWorkerData.add(new ProcessItem(processItem.getId(), processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
+                    assignedWorkerData.add(new ProcessItem(processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
                             "", ""));
                 }
             }
@@ -231,9 +231,9 @@ public class WorkerAssignAdapter extends RecyclerView.Adapter<WorkerAssignAdapte
                             Log.i("Dhukse", "Dhukse");
                             Worker worker = getWorkerInfo(holder.workerIdView.getText().toString());
                             processItemArrayList.remove(position);
-                            processItemArrayList.add(position, new ProcessItem(processItem.getId(), processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
+                            processItemArrayList.add(position, new ProcessItem(processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
                                     holder.workerIdView.getText().toString(), worker.getName()));
-                            assignedWorkerData.add(new ProcessItem(processItem.getId(), processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
+                            assignedWorkerData.add(new ProcessItem(processItem.getProcessName(), processItem.getMachineType(), new Double(Math.round(Integer.parseInt(holder.hourlyTarget.getText().toString()))),
                                     holder.workerIdView.getText().toString(), worker.getName()));
                         }else{
 

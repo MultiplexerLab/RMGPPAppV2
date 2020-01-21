@@ -14,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -63,19 +64,19 @@ public class FullDaySummeryFragment extends Fragment {
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("supervisor", MODE_PRIVATE);
         String styleNo = sharedPreferences.getString("styleNo", "");
+        String supervisorId = sharedPreferences.getString("supervisorId", "");
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         String currentDate = df.format(new Date()).toString();
 
-        String getUrl = Endpoints.GET_SUMMERY_DATA + "?styleNo=" + styleNo + "&entryTime=" + currentDate;
+        String getUrl = Endpoints.GET_SUMMERY_DATA + "?styleNo=" + styleNo + "&entryTime=" + currentDate+ "&supervisorId="+supervisorId;
         getUrl = getUrl.replace(" ", "%20");
         Log.i("summeryYrl", getUrl);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, getUrl, null, new Response.Listener<JSONArray>() {
+        JsonObjectRequest jsonArrayRequest = new JsonObjectRequest(Request.Method.GET, getUrl, null, new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(JSONArray response) {
+            public void onResponse(JSONObject jsonObject) {
                 try {
                     int totalQuantity = 0;
-                    JSONObject jsonObject = response.getJSONObject(0);
                     if(jsonObject.getString("totalQuantity")!=null){
                         totalQuantity = Integer.parseInt(jsonObject.getString("totalQuantity"));
                     }

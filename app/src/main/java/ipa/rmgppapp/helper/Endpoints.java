@@ -1,15 +1,15 @@
 package ipa.rmgppapp.helper;
 
 public class Endpoints {
-    // public static final String BASE_URL = "https://rmgppapp.com/android_api/";
+    public static final String BASE_URL_OLD = "https://rmgppapp.com/android_api/";
     // public static final String BASE_URL2 = "https://rmgpp.rmgppapp.com/api/";
 
     public static final String BASE_URL = "https://beta.rmgppapp.com/api/";
     public static final String CHECK_SUPERVISOR_URL = BASE_URL + "checkSupervisor";
-    public static final String POST_ASSIGNED_WORKER_URL = BASE_URL  + "insertAssignedWorker"; //Unexpected response code 500
+    public static final String POST_ASSIGNED_WORKER_URL = BASE_URL_OLD  + "insertAssignedWorker.php"; //Unexpected response code 500
     public static final String GET_HR_DATA_URL = BASE_URL + "hrData";
     public static final String GET_PLANNING_DATA_URL = BASE_URL + "planningData";
-    public static final String GET_OPERATION_DATA_URL = BASE_URL + "operationData";
+    public static final String GET_OPERATION_DATA_URL = BASE_URL_OLD + "operationData.php";
     public static final String POST_HOURLY_DATA_URL = BASE_URL + "insertHourlyRecord"; //Unexpected response code 500
     public static final String POST_LINE_DATA_URL = BASE_URL + "insertLineData"; //Unexpected response code 500
     public static final String POST_LINE_TARGET_URL = BASE_URL + "insertLineTarget";
