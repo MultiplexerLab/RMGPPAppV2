@@ -18,7 +18,7 @@ public class Endpoints {
     public static final String GET_SUMMERY_DATA = BASE_URL + "getSummeryData";
     public static final String POST_NEW_STYLE_URL = BASE_URL + "insertStyle";
     public static final String CHECK_LINE_TARGET_URL = BASE_URL + "checkLineTarget";
-    public static final String GET_PROBLEM_DATA_URL = BASE_URL + "getProblems/Input";
+    public static final String GET_PROBLEM_DATA_URL = BASE_URL + "getProblems/";
     public static final String GET_ALL_STYLES = BASE_URL + "getAllStyles"; // SELECT DISTINCT StyleNo FROM order_list
     public static final String GET_ALL_STYLES_OB = BASE_URL + "getAllStylesOB";
     public static final String GET_STYLE_DETAILS = BASE_URL + "getStyleDetails";
